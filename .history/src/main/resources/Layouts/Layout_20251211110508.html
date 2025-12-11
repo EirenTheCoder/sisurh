@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">Mi Aplicación</title>
+    </head>
+
+<body>
+
+    <header th:fragment="header">
+        <nav class="navbar">
+            <a href="/" th:href="@{/}" class="brand">Mi App</a>
+            <ul>
+                <li><a href="/home" th:href="@{/home}">Inicio</a></li>
+                <li><a href="/about" th:href="@{/about}">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main th:fragment="content">
+        </main>
+
+    <footer th:fragment="footer">
+        <p>&copy; <span th:text="${#dates.year(#dates.createNow())}">2025</span> Layout con Thymeleaf.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Main<siurh>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "devida.siurh.Main",
+            "projectName": "siurh",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SiurhApplication<siurh>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "devida.siurh.SiurhApplication",
+            "projectName": "siurh",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="filtro-busqueda"> 
+    
+    <h5 class="text-success mb-3"><i class="bi bi-funnel-fill"></i> Criterios de Búsqueda</h5>
+    
+    <div class="mb-3">
+        <label for="textoBusqueda" class="form-label visually-hidden">Ingresa texto a buscar</label>
+        <input type="text" class="form-control" id="textoBusqueda" placeholder="Ingresa texto a buscar">
+    </div>
+
+    <div class="mb-3">
+        <label for="selectEstado" class="form-label small">Estado</label>
+        <select class="form-select form-select-sm" id="selectEstado">
+            <option selected>--Todos--</option>
+            <option value="1">Vigente</option>
+            <option value="2">Finalizado</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="selectAnio" class="form-label small">Año</label>
+        <select class="form-select form-select-sm" id="selectAnio">
+            <option selected>--Todos--</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+        </select>
+    </div>
+    
+    <div class="mb-3">
+        <label for="selectTipo" class="form-label small">Tipo</label>
+        <select class="form-select form-select-sm" id="selectTipo">
+            <option selected>--Todos--</option>
+            <option value="OV">Oferta de Vacante</option>
+            <option value="CAS">CAS</option>
+        </select>
+    </div>
+    
+    <div class="mb-3">
+        <label for="inputNombre" class="form-label small">Nombre</label>
+        <input type="text" class="form-control form-control-sm" id="inputNombre">
+    </div>
+
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="vigencia" id="radioVigentes" value="vigentes" checked>
+        <label class="form-check-label small" for="radioVigentes">Vigentes</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="vigencia" id="radioTodos" value="todos">
+        <label class="form-check-label small" for="radioTodos">Todos</label>
+    </div>
+    
+    <hr class="mt-3 mb-3">
+
+    <button class="btn btn-success w-100" type="button">
+        <i class="bi bi-search"></i> Buscar
+    </button>
+</div>
+</body>
+</html>

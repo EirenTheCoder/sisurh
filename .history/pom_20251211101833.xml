@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Ajusta estos si quieres otro nombre -->
+    <groupId>devida.siurh</groupId>
+    <artifactId>siurh</artifactId>
+    <version>1.0.0</version>
+    <name>siurh</name>
+    <description>SIURH - Reescritura Java 21</description>
+
+    <!-- SPRING BOOT PARENT -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.5</version>
+        <relativePath/> <!-- Busca en repositorios, no en el padre local -->
+    </parent>
+
+    <properties>
+        <!-- Java 21 -->
+        <java.version>21</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- Web / REST, incluye Tomcat embebido -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- JDBC básico (para luego usar Oracle / lo que toque) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!-- Si vas a usar JPA más adelante -->
+        <!--
+  -->       <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+       
+
+        <!-- Tests -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Driver de BD lo añadimos después (Oracle, Postgres, etc.) -->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin de Spring Boot para crear el jar ejecutable -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

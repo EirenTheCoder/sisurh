@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/layout :: head">
+      <meta charset="utf-8">
+    </head>
+
+<body>
+    
+    <header th:replace="fragments/layout :: header">
+        </header>
+
+    <main th:replace="fragments/layout :: content">
+        <section class="hero">
+            <h1>Hola, ¡Bienvenido a la Página de Inicio!</h1>
+            <p th:text="'Esta es la hora actual del servidor: ' + ${#dates.format(#dates.createNow(), 'HH:mm:ss')}">
+                Hora del servidor
+            </p>
+            <p>Este contenido es exclusivo de `home.html`.</p>
+        </section>
+        
+    </main>
+
+    <footer th:replace="fragments/layout :: footer">
+        </footer>
+
+</body>
+</html>
